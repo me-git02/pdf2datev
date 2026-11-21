@@ -1,0 +1,25 @@
+
+# Confidential files
+/real/
+*.pdf
+*.xlsx
+*.csv
+
+# Allow only synthetic demo files
+!/examples/demo_kontoauszug.pdf
+!/examples/Book1.xlsx
+!/examples/expected_import_datev.csv
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Local configuration
+.env
+.env.*
