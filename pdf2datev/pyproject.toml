@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf2datev"
+version = "1.0.0"
+description = "Convert German bank statement PDFs into DATEV booking import files"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pdfplumber>=0.11",
+    "openpyxl>=3.1",
+]
+
+[project.optional-dependencies]
+ocr = ["easyocr>=1.7", "numpy"]
+
+[project.scripts]
+pdf2datev = "pdf2datev.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
